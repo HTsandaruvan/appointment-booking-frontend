@@ -1,36 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🗓️ Appointment Booking System - Frontend
 
-## Getting Started
+A modern, responsive, and user-friendly frontend for the **Appointment Booking System**, built using **Next.js**, **TailwindCSS**, **ShadCN**, and **React Hook Form**. It provides seamless appointment scheduling with role-based access for **Users** and **Admins**.
 
-First, run the development server:
+---
 
+## 🚀 **Features**
+
+- ✨ **Role-Based Dashboards:**  
+  - **User Dashboard:** View, book, and manage appointments; edit profile details.  
+  - **Admin Dashboard:** Manage users, appointments, and time slots.
+
+
+- 📅 **Appointment Booking:**  
+  - Calendar-based date selection with real-time available time slots.  
+  - Error handling for already booked slots with instant feedback.
+
+- 🏷️ **Profile Management:**  
+  - View and update user profile with secure authentication.  
+  - Upload and update profile pictures.
+
+- 📩 **Interactive UI:**  
+  - Beautifully designed UI with **ShadCN** components.  
+  - Fully responsive and mobile-friendly.
+
+- 📬 **Notifications:**  
+  - Success and error toast notifications powered by `react-hot-toast`.  
+  - Real-time updates for booking confirmations and profile changes.
+  - Real-time updates for booking confirmations and cancl via emails.
+---
+
+## 🏗️ **Tech Stack**
+
+- **Framework:** Next.js (React 18)  
+- **Styling:** TailwindCSS, ShadCN UI  
+- **Forms & Validation:** React Hook Form, Yup  
+- **HTTP Client:** Axios  
+- **Authentication:** JWT (via backend APIs)  
+- **Notifications:** react-hot-toast  
+- **State Management:** React Context API
+
+---
+
+## 💻 **Getting Started**
+
+### 1️⃣ **Clone the Repository**
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-username/appointment-booking-frontend.git
+cd appointment-booking-frontend
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2️⃣ Install Dependencies
+```bash
+npm install
+3️⃣ Configure Environment Variables
+Create a .env.local file in the root directory:
+```
+```env
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+NEXT_PUBLIC_API_URL=http://localhost:5000/api
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
 
-## Learn More
+4️⃣ Run the Development Server
+```bash
 
-To learn more about Next.js, take a look at the following resources:
+npm run dev
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Open http://localhost:3000 to view it in the browser.
 
-## Deploy on Vercel
+/app
+  ├── admin/                # Admin dashboard components & pages
+  ├── booking/              # Booking flow pages
+  ├── dashboard/            # User dashboard (profile & appointments)
+  ├── components/           # Reusable UI components
+/lib 
+  ├── api.js                # API integrations & helper functions
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+📜 Key Functionalities
+🏠 User Dashboard
+View and update profile details (name, address, phone, profile picture).
+View and cancel booked appointments.
+🏢 Admin Dashboard
+User Management: Add, edit, delete users, and view their appointments.
+Appointment Management: View all appointments, delete appointments.
+Slot Management: Add, view, delete, and manage time slots.
+🎨 UI Highlights
+Responsive sidebar for navigation.
+Dynamic role-based rendering for users and admins.
+Smooth form validations with real-time feedback.
+Modern and animated UI components.
+
+
+🛠️ Build for Production
+```bash
+
+npm run build
+npm run start
+```
+
+🌐 Live Demo
+🔗 https://appointment-booking-taupe.vercel.app/
+
+📞 Contact
+💻 GitHub: HTsandaruvan
+🌐 Portfolio: harsha-portfolio
+📧 Email: tsandaruvan29@gmail.com
