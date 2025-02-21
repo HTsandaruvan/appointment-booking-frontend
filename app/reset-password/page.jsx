@@ -10,12 +10,13 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import api from "@/lib/api";
+import { Suspense } from "react";
 
 const schema = yup.object().shape({
     newPassword: yup.string().required("Password is required").min(6, "Must be at least 6 characters"),
 });
 
-export default function ResetPasswordPage() {
+const ResetPasswordContent = () => {
     const router = useRouter();
     const searchParams = useSearchParams();
     const [token, setToken] = useState("");
@@ -51,13 +52,13 @@ export default function ResetPasswordPage() {
             setLoading(false);
         }
     };
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }} className="min-h-screen">
-
             <div className="w-full max-w-md mx-auto mt-16 p-6 bg-white/10 backdrop-blur-lg rounded-lg shadow-lg border border-white/20">
                 <h2 className="text-3xl font-bold text-white text-center mb-6">Reset Password</h2>
 
@@ -89,5 +90,13 @@ export default function ResetPasswordPage() {
                 </form>
             </div>
         </motion.div>
+    );
+};
+
+export default function Page() {
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <ResetPasswordContent />
+        </Suspense>
     );
 }
