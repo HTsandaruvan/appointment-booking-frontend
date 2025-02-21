@@ -69,7 +69,7 @@ npm run dev
 ```
 
 Open http://localhost:3000 to view it in the browser.
-
+```
 /app
   ├── admin/                # Admin dashboard components & pages
   ├── booking/              # Booking flow pages
@@ -77,7 +77,7 @@ Open http://localhost:3000 to view it in the browser.
   ├── components/           # Reusable UI components
 /lib 
   ├── api.js                # API integrations & helper functions
-
+```
 
 📜 Key Functionalities
 🏠 User Dashboard
