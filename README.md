@@ -27,6 +27,14 @@ A modern, responsive, and user-friendly frontend for the **Appointment Booking S
   - Success and error toast notifications powered by `react-hot-toast`.  
   - Real-time updates for booking confirmations and profile changes.
   - Real-time updates for booking confirmations and cancl via emails.
+
+-📊 Admin Analytics:
+  -Implementation: Use Chart.js or Recharts to display analytics (e.g., most popular time slots, user booking trends).
+  -Benefit: Gives admins insights for better resource allocation and slot management.
+
+-🗃️ Pagination & Filtering for Admin Panels:
+  -Implementation: Add pagination and filtering on user and appointment management tables.
+  -Benefit: Improves performance and usability when dealing with large datase 
 ---
 
 ## 🏗️ **Tech Stack**
@@ -106,5 +114,5 @@ npm run start
 
 📞 Contact
 💻 GitHub: HTsandaruvan
-🌐 Portfolio: harsha-portfolio
+🌐 Portfolio: https://harsha-portfolio-rho.vercel.app
 📧 Email: tsandaruvan29@gmail.com
