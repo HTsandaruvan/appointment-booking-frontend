@@ -51,7 +51,6 @@ export default function ResetPasswordPage() {
             setLoading(false);
         }
     };
-
     return (
         <motion.div
             initial={{ opacity: 0 }}
