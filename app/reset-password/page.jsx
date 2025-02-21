@@ -12,10 +12,12 @@ import * as yup from "yup";
 import api from "@/lib/api";
 import { Suspense } from "react";
 
+// Schema for form validation
 const schema = yup.object().shape({
     newPassword: yup.string().required("Password is required").min(6, "Must be at least 6 characters"),
 });
 
+// Component to handle reset password logic
 const ResetPasswordContent = () => {
     const router = useRouter();
     const searchParams = useSearchParams();
@@ -27,7 +29,7 @@ const ResetPasswordContent = () => {
         resolver: yupResolver(schema),
     });
 
-    // ✅ Fix hydration issue by setting token inside useEffect
+    // Set token inside useEffect to prevent SSR issues
     useEffect(() => {
         if (typeof window !== "undefined") {
             setToken(searchParams.get("token") || "");
@@ -100,3 +102,10 @@ export default function Page() {
         </Suspense>
     );
 }
+
+// Dynamically import the component with SSR disabled
+import dynamic from "next/dynamic";
+
+export const ResetPasswordPage = dynamic(() => Promise.resolve(ResetPasswordContent), {
+    ssr: false,
+});
